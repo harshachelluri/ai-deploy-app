@@ -1,0 +1,252 @@
+:host {
+  display: block;
+}
+
+.page-shell {
+  width: min(1120px, calc(100% - 48px));
+  margin: 0 auto;
+  padding: 28px 0 32px;
+}
+
+.topbar,
+.brand,
+.actions,
+.panel-heading,
+.panel-footer,
+footer {
+  display: flex;
+  align-items: center;
+}
+
+.topbar {
+  justify-content: space-between;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 20px;
+}
+
+.brand {
+  gap: 10px;
+  color: var(--ink);
+  font-family: var(--display-font);
+  font-size: 1.05rem;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.brand-mark {
+  display: grid;
+  width: 34px;
+  height: 34px;
+  place-items: center;
+  background: var(--ink);
+  color: var(--paper);
+  font-size: 0.7rem;
+  letter-spacing: 0.04em;
+}
+
+.version,
+.eyebrow,
+.card-number,
+.panel-footer,
+footer {
+  color: var(--muted);
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(280px, 0.65fr);
+  gap: 80px;
+  align-items: end;
+  padding: 92px 0 104px;
+}
+
+.eyebrow {
+  margin: 0 0 22px;
+  color: var(--coral);
+  font-weight: 800;
+}
+
+h1,
+h2,
+p {
+  margin: 0;
+}
+
+h1 {
+  color: var(--ink);
+  font-family: var(--display-font);
+  font-size: clamp(3.6rem, 8vw, 7.3rem);
+  font-weight: 800;
+  line-height: 0.9;
+}
+
+h1 em {
+  color: var(--coral);
+  font-family: var(--body-font);
+  font-size: 0.83em;
+  font-weight: 400;
+}
+
+.intro {
+  max-width: 500px;
+  margin-top: 30px;
+  color: var(--muted);
+  font-size: 1.05rem;
+  line-height: 1.65;
+}
+
+.actions {
+  gap: 12px;
+  margin-top: 34px;
+}
+
+.button {
+  padding: 13px 17px;
+  font-size: 0.88rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.button-primary {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+.button-primary span {
+  margin-left: 8px;
+  color: var(--yellow);
+}
+
+.button-quiet {
+  color: var(--ink);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.status-panel {
+  border: 1px solid var(--line);
+  border-top: 4px solid var(--blue);
+  padding: 24px;
+  background: rgba(255, 253, 248, 0.7);
+}
+
+.panel-heading {
+  gap: 9px;
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.status-dot {
+  width: 9px;
+  height: 9px;
+  background: var(--coral);
+  border-radius: 50%;
+}
+
+.status-dot.online {
+  background: var(--green);
+}
+
+.status-value {
+  margin-top: 45px;
+  color: var(--ink);
+  font-family: var(--display-font);
+  font-size: 1.8rem;
+  font-weight: 800;
+}
+
+.status-panel p {
+  min-height: 48px;
+  margin-top: 10px;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.panel-footer {
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 34px;
+  padding-top: 14px;
+  border-top: 1px solid var(--line);
+}
+
+.status-code.online {
+  color: var(--green);
+}
+
+.idea-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.idea-card {
+  position: relative;
+  min-height: 220px;
+  padding: 22px;
+  border-top: 5px solid;
+  background: var(--paper);
+}
+
+.accent-coral { border-color: var(--coral); }
+.accent-yellow { border-color: var(--yellow); }
+.accent-blue { border-color: var(--blue); }
+
+.card-number {
+  color: var(--muted);
+}
+
+.idea-card h2 {
+  margin-top: 45px;
+  color: var(--ink);
+  font-family: var(--display-font);
+  font-size: 1.45rem;
+}
+
+.idea-card p {
+  max-width: 250px;
+  margin-top: 10px;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.card-arrow {
+  position: absolute;
+  right: 22px;
+  bottom: 18px;
+  color: var(--ink);
+  font-size: 1.5rem;
+}
+
+footer {
+  justify-content: space-between;
+  gap: 20px;
+  padding-top: 38px;
+}
+
+@media (max-width: 760px) {
+  .page-shell {
+    width: min(100% - 32px, 560px);
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 48px;
+    padding: 68px 0 70px;
+  }
+
+  .idea-grid {
+    grid-template-columns: 1fr;
+  }
+
+  footer {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
